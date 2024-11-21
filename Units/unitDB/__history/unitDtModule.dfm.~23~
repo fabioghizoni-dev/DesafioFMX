@@ -1,0 +1,22 @@
+object dtModule: TdtModule
+  Height = 399
+  Width = 448
+  object DriverPG: TFDPhysPgDriverLink
+    VendorHome = 
+      'C:\Users\User\Documents\Embarcadero\Studio\Projetos_X\DesafioFMX' +
+      '\lib'
+    Left = 24
+    Top = 24
+  end
+  object Connection: TFDConnection
+    Params.Strings = (
+      'Database=desafio'
+      'User_Name=postgres'
+      'Password=123'
+      'Server=localhost'
+      'DriverID=PG')
+    LoginPrompt = False
+    Left = 200
+    Top = 184
+  end
+end

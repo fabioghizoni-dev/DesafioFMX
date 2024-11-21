@@ -1,0 +1,20 @@
+program ProjectDesafio;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  unitMain in '..\Units\unitsPrimary\unitMain.pas' {frmPrincipal},
+  unitDtModule in '..\Units\unitDB\unitDtModule.pas' {dtModule: TDataModule},
+  unitChangeCheck in '..\Units\unitsSecondary\unitChangeCheck.pas',
+  unitCreateTreeView in '..\Units\unitsSecondary\unitCreateTreeView.pas',
+  unitStoreItens in '..\Units\unitsSecondary\unitStoreItens.pas',
+  unitTreeViewList in '..\Units\unitsSecondary\unitTreeViewList.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TdtModule, dtModule);
+  Application.Run;
+end.

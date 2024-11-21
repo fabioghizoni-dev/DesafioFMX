@@ -1,0 +1,59 @@
+object DtModule: TDtModule
+  Height = 480
+  Width = 640
+  object DriverPG: TFDPhysPgDriverLink
+    VendorHome = 'C:\xampp\apache\modules'
+    VendorLib = 
+      'C:\Users\User\Documents\Embarcadero\Studio\Projetos_X\DesafioFMX' +
+      '\lib\libpq.dll'
+    Left = 16
+    Top = 16
+  end
+  object Connection: TFDConnection
+    Params.Strings = (
+      'Database=desafio'
+      'User_Name=postgres'
+      'Password=123'
+      'Server=localhost'
+      'DriverID=PG')
+    LoginPrompt = False
+    Left = 80
+    Top = 16
+  end
+  object FDQuery1: TFDQuery
+    Connection = Connection
+    Left = 240
+    Top = 312
+  end
+  object FDQuery2: TFDQuery
+    Connection = Connection
+    Left = 384
+    Top = 312
+  end
+  object t117_direitos_acesso: TFDTable
+    IndexFieldNames = 't117_ca_codigo'
+    Connection = Connection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 't117_direitos_acesso'
+    Left = 240
+    Top = 256
+  end
+  object t118_direitos_acesso_usuarios: TFDTable
+    IndexFieldNames = 't003_nr_codigo;t117_ca_codigo'
+    Connection = Connection
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 't118_direitos_acesso_usuarios'
+    Left = 384
+    Top = 256
+  end
+  object dtSource: TDataSource
+    DataSet = t117_direitos_acesso
+    Left = 584
+    Top = 416
+  end
+  object dtSource2: TDataSource
+    DataSet = t118_direitos_acesso_usuarios
+    Left = 528
+    Top = 416
+  end
+end

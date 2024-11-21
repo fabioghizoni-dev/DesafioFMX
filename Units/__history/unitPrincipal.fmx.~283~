@@ -1,0 +1,242 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  ClientHeight = 630
+  ClientWidth = 1145
+  Visible = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object rectMain: TRectangle
+    Align = Client
+    Fill.Color = claWhitesmoke
+    Size.Width = 1145.000000000000000000
+    Size.Height = 630.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object treeView: TTreeView
+      Align = Left
+      Size.Width = 321.000000000000000000
+      Size.Height = 630.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'treeViewStyle1'
+      TabOrder = 1
+      ParentShowHint = False
+      ShowHint = False
+      ShowScrollBars = False
+      ShowCheckboxes = True
+      OnChangeCheck = treeViewChangeCheck
+      Viewport.Width = 317.000000000000000000
+      Viewport.Height = 626.000000000000000000
+      object treeViewItem: TTreeViewItem
+        IsChecked = False
+        IsExpanded = False
+        IsSelected = False
+        TabOrder = 0
+        object treeViewItem2: TTreeViewItem
+          IsChecked = False
+          IsExpanded = False
+          IsSelected = False
+          TabOrder = 0
+          object treeViewItem3: TTreeViewItem
+            IsChecked = False
+            IsExpanded = False
+            IsSelected = False
+            TabOrder = 0
+            object treeViewItem4: TTreeViewItem
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = False
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+    object btnSalvarBanco: TButton
+      StyledSettings = []
+      Position.X = 860.000000000000000000
+      Position.Y = 554.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'btnSalvarBancoStyle1'
+      TabOrder = 2
+      Text = 'Salvar no Banco'
+      TextSettings.Font.Family = 'Tahoma'
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.Trimming = None
+      OnClick = btnSalvarBancoClick
+    end
+    object strGridFilho: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 123.000000000000000000
+      Position.Y = 233.000000000000000000
+      Size.Width = 357.000000000000000000
+      Size.Height = 342.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Visible = False
+      Viewport.Width = 337.000000000000000000
+      Viewport.Height = 317.000000000000000000
+      object StringColumn4: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 177.000000000000000000
+      end
+      object StringColumn5: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 79.000000000000000000
+      end
+      object StringColumn6: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 79.000000000000000000
+      end
+    end
+    object strGridNeto: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 694.000000000000000000
+      Position.Y = 374.000000000000000000
+      Size.Width = 415.000000000000000000
+      Size.Height = 293.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'gridstyle'
+      TabOrder = 5
+      Visible = False
+      Viewport.Width = 395.000000000000000000
+      Viewport.Height = 268.000000000000000000
+      object StringColumn7: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 240.000000000000000000
+      end
+      object StringColumn8: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 80.000000000000000000
+      end
+      object StringColumn9: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 72.000000000000000000
+      end
+    end
+    object strGridPai: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 357.000000000000000000
+      Position.Y = 417.000000000000000000
+      Size.Width = 317.000000000000000000
+      Size.Height = 231.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Visible = False
+      Viewport.Width = 297.000000000000000000
+      Viewport.Height = 190.000000000000000000
+      object StringColumn1: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 129.000000000000000000
+      end
+      object StringColumn2: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+      end
+      object StringColumn3: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 82.000000000000000000
+      end
+    end
+    object strGridSubNeto: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 704.000000000000000000
+      Position.Y = 346.000000000000000000
+      Size.Width = 412.000000000000000000
+      Size.Height = 342.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Visible = False
+      Viewport.Width = 392.000000000000000000
+      Viewport.Height = 317.000000000000000000
+      object StringColumn10: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 200.000000000000000000
+      end
+      object StringColumn11: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+      end
+      object StringColumn12: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
+        Size.Width = 90.000000000000000000
+      end
+    end
+    object dbGrid: TGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 357.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 720.000000000000000000
+      Size.Height = 241.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'dbGridStyle1'
+      TabOrder = 8
+      RowCount = 200
+      Viewport.Width = 700.000000000000000000
+      Viewport.Height = 200.000000000000000000
+    end
+    object Grid1: TGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 357.000000000000000000
+      Position.Y = 320.000000000000000000
+      Size.Width = 720.000000000000000000
+      Size.Height = 226.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'dbGridStyle1'
+      TabOrder = 7
+      RowCount = 0
+      Viewport.Width = 716.000000000000000000
+      Viewport.Height = 201.000000000000000000
+    end
+  end
+  object NavigatorBindSourceDB2: TBindNavigator
+    Position.X = 504.000000000000000000
+    Position.Y = 554.000000000000000000
+    Size.Width = 340.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    DataSource = BindSourceDB2
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = dtModule.Query
+    ScopeMappings = <>
+    Left = 68
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 68
+    Top = 173
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = dbGrid
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = Grid1
+      Columns = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = dtModule.Query2
+    ScopeMappings = <>
+    Left = 69
+    Top = 274
+  end
+end

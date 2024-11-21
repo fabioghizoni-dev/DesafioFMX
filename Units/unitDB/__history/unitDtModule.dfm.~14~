@@ -1,0 +1,47 @@
+object dtModule: TdtModule
+  Height = 399
+  Width = 448
+  object DriverPG: TFDPhysPgDriverLink
+    VendorHome = 'C:\xampp\apache\modules'
+    Left = 24
+    Top = 24
+  end
+  object Conexao: TFDConnection
+    Params.Strings = (
+      'Database=db-desafio'
+      'User_Name=postgres'
+      'Password=123'
+      'Server=localhost'
+      'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
+    Left = 200
+    Top = 176
+  end
+  object dtSource: TDataSource
+    DataSet = Query
+    Left = 312
+    Top = 176
+  end
+  object Query: TFDQuery
+    Active = True
+    Connection = Conexao
+    SQL.Strings = (
+      'SELECT * FROM t117_direitos_acesso')
+    Left = 256
+    Top = 176
+  end
+  object Query2: TFDQuery
+    Active = True
+    Connection = Conexao
+    SQL.Strings = (
+      'SELECT * FROM t118_direitos_acesso_usuarios')
+    Left = 200
+    Top = 232
+  end
+  object dtSource2: TDataSource
+    DataSet = Query2
+    Left = 200
+    Top = 288
+  end
+end

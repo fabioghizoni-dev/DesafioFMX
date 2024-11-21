@@ -1,0 +1,4 @@
+object dtModule: TdtModule
+  Height = 399
+  Width = 448
+end

@@ -1,0 +1,39 @@
+unit uDtModule;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Phys.PGDef, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
+  FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.PG, FireDAC.FMXUI.Wait, Data.DB,
+  FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet;
+
+type
+  TDtModule = class(TDataModule)
+    t117_direitos_acesso: TFDTable;
+    t118_direitos_acesso_usuarios: TFDTable;
+    dtSource: TDataSource;
+    dtSource2: TDataSource;
+    procedure DriverPGDriverCreated(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DtModule: TDtModule;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TDtModule.DriverPGDriverCreated(Sender: TObject);
+begin
+  DriverPG.VendorHome := 'C:\xampp\apache\modules';
+end;
+
+end.

@@ -1,0 +1,26 @@
+unit unitCriarTreeview;
+
+interface
+
+implementation
+
+{ FUNÇÃO PARA CRIAR TREEVIEW E SEUS ITENS }
+function TfrmPrincipal.CriarTreeViewItem(No: TTreeViewItem;
+  const Texto, Numero: String): TTreeViewItem;
+var
+  Validar: TAcesso;
+begin
+  Result := TTreeViewItem.Create(TreeView);
+  Result.Text := Texto;
+
+  Validar := TAcesso.Create(Texto, Numero, Result.IsChecked);
+  // TagObject recebe Texto, Numero e Checked
+  Result.TagObject := Validar;
+
+  if Assigned(No) then
+    Result.Parent := No
+  else
+    Result.Parent := TreeView;
+end;
+
+end.

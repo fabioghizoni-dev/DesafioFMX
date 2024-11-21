@@ -1,0 +1,26 @@
+inherited frmPrincipal_Surface: TfrmPrincipal_Surface
+  ClientHeight = 1920
+  ClientWidth = 1080
+  DesignerMasterStyle = 0
+  inherited rectMain: TRectangle
+    Size.Width = 1080.000000000000000000
+    Size.Height = 1920.000000000000000000
+    inherited treeView: TTreeView
+      Viewport.Width = 741.000000000000000000
+      Viewport.Height = 505.000000000000000000
+      inherited StringGrid1: TStringGrid
+        Viewport.Width = 481.000000000000000000
+        Viewport.Height = 357.000000000000000000
+        inherited StringColumn1: TStringColumn
+          Size.Width = 161.000000000000000000
+        end
+        inherited StringColumn2: TStringColumn
+          Size.Width = 159.000000000000000000
+        end
+        inherited StringColumn3: TStringColumn
+          Size.Width = 143.000000000000000000
+        end
+      end
+    end
+  end
+end
